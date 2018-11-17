@@ -199,6 +199,7 @@ def main():
     if args.plots:
         animate.make_png_steps(bestgraph, bestplan, args.plots, args.faction)
 
+    gs = gsheets.setup()
     gsheets.write_workplan(gs, args.sheetid, bestgraph, bestplan, args.faction, args.travelmode, args.nosave)
 
 
